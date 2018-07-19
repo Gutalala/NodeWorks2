@@ -11,7 +11,7 @@ var app = express()
 //Body Parser Middleware
 
 
-app.use(logger);
+//app.use(logger);
 
   app.get()
 
