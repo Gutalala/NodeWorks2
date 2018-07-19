@@ -12,13 +12,19 @@ var app = express()
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-var logger = function(req, res){
-	console.log('I\'m really really good');
-}
+// var logger = function(req, res){
+// 	console.log('I\'m really really good');
+// }
 
-app.use(logger);
+// app.use(logger);
 
+// Set Static Path
+app.use(express.static(path.join(__dirname, 'public')));
 
   app.listen(PORT, function() {
   	console.log(`Listening on ${ PORT }`);
   }) 
+
+  app.get('/', function(req, res){
+  	res.send("hello guys");
+  })
