@@ -9,11 +9,10 @@ var app = express()
   //.get('/cool', (req, res) => res.send(cool()))
 
 //Body Parser Middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+
 
 var logger = function(req, res){
-	console.log('I\'m really really good');
+	console.log('Im really really good');
 }
 
 app.use(logger);
